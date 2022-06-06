@@ -23,7 +23,8 @@ jobs:
 
       - name: Overwrite docs branch with main # From https://stackoverflow.com/a/2763118
         run: |
-          git switch docs
+          git pull
+          git checkout docs --
           git switch main
           git merge --strategy=ours docs
           git switch main
