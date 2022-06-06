@@ -23,10 +23,10 @@ jobs:
 
       - name: Overwrite docs branch with main # From https://stackoverflow.com/a/2763118
         run: |
-          git checkout docs
-          git checkout main
+          git switch docs
+          git switch main
           git merge --strategy=ours docs
-          git checkout main
+          git switch main
           git merge docs
 
       - name: Run dokkaHtml
