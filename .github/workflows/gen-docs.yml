@@ -23,8 +23,8 @@ jobs:
 
       - name: Overwrite docs branch with main # From https://stackoverflow.com/a/2763118
         run: |
-          git pull origin docs:docs
           git config pull.rebase false
+          git pull origin docs:docs
           git merge --strategy=ours docs
           git checkout main
           git merge docs
