@@ -133,5 +133,6 @@ compileKotlin {
 }
 
 tasks.named("dokkaHtml") {
+    System.out.print("projectDir is " + projectDir)
     outputDirectory.set(new File(projectDir, "docs"))
 }
