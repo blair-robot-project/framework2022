@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Generate docs and push
+    name: Generate docs
     steps:
       - name: git-checkout
         uses: actions/checkout@v2
@@ -23,8 +23,8 @@ jobs:
 
       - name: Overwrite docs branch with main # From https://stackoverflow.com/a/2763118
         run: |
-          git config pull.rebase false
-          git pull origin docs:docs
+          git checkout docs
+          git checkout main
           git merge --strategy=ours docs
           git checkout main
           git merge docs
