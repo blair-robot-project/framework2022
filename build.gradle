@@ -132,7 +132,7 @@ compileKotlin {
     dependsOn updateGitHooks
 }
 
-tasks.named("dokkaHtml") {
-    System.out.print("projectDir is " + projectDir)
+dokkaHtml {
+    project.logger.debug("projectDir is $projectDir, docs dir is ${new File(projectDir, "docs")}")
     outputDirectory.set(new File(projectDir, "docs"))
 }
