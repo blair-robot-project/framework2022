@@ -133,5 +133,5 @@ compileKotlin {
 }
 
 tasks.named("dokkaHtml") {
-    outputDirectory.set(new File(rootDir, "dokka"))
+    outputDirectory.set(new File(rootDir, "docs"))
 }
