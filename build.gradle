@@ -133,6 +133,6 @@ compileKotlin {
 }
 
 dokkaHtml {
-    logger.error("projectDir is $projectDir, docs dir is ${new File(rootDir, "docs")}")
-    outputDirectory.set(new File(rootDir, "docs"))
+//    logger.error("projectDir is $projectDir, docs dir is ${new File(rootDir, "docs")}")
+//    outputDirectory.set(new File(rootDir, "docs"))
 }

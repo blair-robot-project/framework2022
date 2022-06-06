@@ -36,6 +36,7 @@ jobs:
           ls
           ls build
           ls build/dokka
+          cp -a build/dokka/html/. docs/
           git add docs
 
       - name: Commit files
