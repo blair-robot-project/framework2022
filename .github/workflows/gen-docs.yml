@@ -36,6 +36,8 @@ jobs:
           ls
           ls build
           ls build/dokka
+          echo "contents of build/dokka/html:"
+          ls build/dokka/html
           cp -a build/dokka/html/. docs/
           git add docs
 
