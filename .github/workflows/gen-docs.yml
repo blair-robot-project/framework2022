@@ -27,8 +27,8 @@ jobs:
           git checkout docs --
           git switch main
           git merge --strategy=ours docs
-          git switch main
-          git merge docs
+          git switch docs
+          git merge main
 
       - name: Run dokkaHtml
         run: |
