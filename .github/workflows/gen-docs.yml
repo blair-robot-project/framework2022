@@ -33,6 +33,7 @@ jobs:
       - name: Run dokkaHtml
         run: |
           ./gradlew dokkaHtml
+          ls -la
           git add docs
 
       - name: Commit files
