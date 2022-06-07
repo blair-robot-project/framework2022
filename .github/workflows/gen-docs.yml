@@ -47,6 +47,9 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git commit -m "Generate html" -a
 
+      - name: Pull before pushing
+        run: git pull
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
