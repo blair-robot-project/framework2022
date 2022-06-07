@@ -33,11 +33,6 @@ jobs:
       - name: Run dokkaHtml
         run: |
           ./gradlew dokkaHtml
-          ls
-          ls build
-          ls build/dokka
-          echo "contents of build/dokka/html:"
-          ls build/dokka/html
           cp -a build/dokka/html/. docs/
           git add docs
 
@@ -48,10 +43,11 @@ jobs:
           git commit -m "Generate html" -a
 
       - name: Pull before pushing
-        run: git pull
+        run: git pull origin docs
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: docs
+          force: true
