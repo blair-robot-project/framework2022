@@ -3,7 +3,7 @@ name: Generate docs
 on:
   push:
     branches:
-      - gendocs
+      - main
 
 jobs:
   build:
