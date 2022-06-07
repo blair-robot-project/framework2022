@@ -32,6 +32,7 @@ jobs:
 
       - name: Run dokkaHtml
         run: |
+          rm -rf docs
           ./gradlew dokkaHtml
           cp -a build/dokka/html/. docs/
           git add docs
